@@ -18,6 +18,7 @@ import java.util.Scanner;
  */
 public class MovieDownloader {
 
+
 	public static String[] downloadMovieData(String movie) {
 
 		//construct the url for the omdbapi API
@@ -34,9 +35,10 @@ public class MovieDownloader {
 		String movies[] = null;
 
 		try {
-
+			// create a new URL obj of the urlString created
 			URL url = new URL(urlString);
 
+			// opens the connection of URL obj and turns it into an HTTPURLCONN obj
 			urlConnection = (HttpURLConnection) url.openConnection();
 			urlConnection.setRequestMethod("GET");
 			urlConnection.connect();
